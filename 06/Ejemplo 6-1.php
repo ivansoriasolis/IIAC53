@@ -1,7 +1,7 @@
 <?php
     $papel[] = "Copier";
     $papel[] = "Inkjet";
-    $papel[] = "laser";
+    $papel[] = "Laser";
     $papel[] = "Foto";
 
     print_r($papel);
