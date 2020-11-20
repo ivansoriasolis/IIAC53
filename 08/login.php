@@ -3,5 +3,6 @@
     $db = 'publications';
     $un = 'root';
     $pw = '';
+    $port = 3360;
 
 ?>
