@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>Link Test</title>
+</head>
+
+<body>
+    <a id="mylink" href="http://mysite.com">Click me</a><br>
+    <script>
+        function $(id) {
+            return document.getElementById(id)
+        }
+        document.write("La URL es: " + $("mylink").href)
+    </script>
+</body>
+
+</html>
