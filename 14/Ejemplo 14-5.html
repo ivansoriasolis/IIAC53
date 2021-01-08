@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 30px;
+            background-color: #E9E9E9;
+        }
+
+        div.polaroid {
+            width: 284px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+
+        div.rotate_right {
+            float: left;
+            -ms-transform: rotate(7deg);
+            /* IE 9 */
+            -webkit-transform: rotate(7deg);
+            /* Safari */
+            transform: rotate(7deg);
+        }
+
+        div.rotate_left {
+            float: left;
+            -ms-transform: rotate(-8deg);
+            /* IE 9 */
+            -webkit-transform: rotate(-8deg);
+            /* Safari */
+            transform: rotate(-8deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="polaroid rotate_right">
+        <img src="pulpitrock.jpg" alt="Pulpit rock" width="284" height="213">
+        <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+    </div>
+
+    <div class="polaroid rotate_left">
+        <img src="cinqueterre.jpg" alt="Monterosso" width="284" height="213">
+        <p class="caption">Monterosso al Mare, Italy.</p>
+    </div>
+
+</body>
+
+</html>

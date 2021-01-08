@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<!--backgroundimages.html-->
+
+<head>
+    <title>Ejemplo de multiples fondos</title>
+    <style>
+        .border {
+            font-family: 'Times New Roman';
+            font-style: italic;
+            font-size: 170%;
+            text-align: center;
+            padding: 60px;
+            width: 350px;
+            height: 500px;
+            background: url('b1.gif') top left no-repeat,
+                url('b2.gif') top right no-repeat,
+                url('b3.gif') bottom left no-repeat,
+                url('b4.gif') bottom right no-repeat,
+                url('ba.gif') top repeat-x,
+                url('bb.gif') left repeat-y,
+                url('bc.gif') right repeat-y,
+                url('bd.gif') bottom repeat-x
+        }
+    </style>
+</head>
+
+<body>
+    <div class='border'>
+        <h1>Empleado del mes</h1>
+        <h2>Premia a:</h2>
+        <h3>__________________</h3>
+        <h2>Fecha:</h2>
+        <h3>__/__/____</h3>
+    </div>
+</body>
+
+</html>

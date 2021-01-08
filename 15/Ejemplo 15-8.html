@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agregando elementos</title>
+    <script src='OSC.js'></script>
+</head>
+
+<body>
+    Este es un documento con solo este texto.<br><br>
+    <script>
+        alert('Click OK para agregar elemento')
+        newdiv = document.createElement('div')
+        newdiv.id = 'NewDiv'
+        document.body.appendChild(newdiv)
+        S(newdiv).border = 'solid 1px red'
+        S(newdiv).width = '100px'
+        S(newdiv).height = '100px'
+        newdiv.innerHTML = "Soy un nuevo objeto del DOM"
+        tmp = newdiv.offsetTop
+        alert('Click OK para remover elemento')
+        pnode = newdiv.parentNode
+        pnode.removeChild(newdiv)
+        tmp = pnode.offsetTop
+    </script>
+</body>
+
+</html>

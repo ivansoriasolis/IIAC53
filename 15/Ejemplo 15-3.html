@@ -1,0 +1,18 @@
+<div class="myclass">Contenidos del DIV</div>
+<p class="myclass">Contenido de parrafo</p>
+<script>
+    miarray = C('myclass')
+
+    for (i = 0; i < miarray.length; ++i)
+        S(miarray[i]).textDecoration = 'underline'
+
+    function C(i) {
+        return document.getElementsByClassName(i)
+    }
+    function O(i) {
+        return typeof i == 'object' ? i : document.getElementById(i)
+    }
+    function S(i) {
+        return O(i).style
+    }
+</script>

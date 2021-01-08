@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Positioning</title>
+    <style>
+        #container {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+        }
+
+        #object1 {
+            position: absolute;
+            background: pink;
+            width: 100px;
+            height: 100px;
+            top: 70px;
+            left: 50px;
+        }
+
+        #object2 {
+            position: relative;
+            background: lightgreen;
+            width: 100px;
+            height: 100px;
+            top: 40px;
+            left: 110px;
+        }
+
+        #object3 {
+            position: fixed;
+            background: yellow;
+            width: 100px;
+            height: 100px;
+            top: 150px;
+            left: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br><br><br>
+    <div id='container'>
+        <div id='object1'>Posición absoluta</div>
+        <div id='object2'>Posición relativa</div>
+        <div id='object3'>Posición fija</div>
+    </div>
+</body>
+
+</html>
