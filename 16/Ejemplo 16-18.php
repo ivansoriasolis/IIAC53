@@ -21,7 +21,7 @@
     <script>
       $('a').prepend('Link: ')
       $("[href^='http']").append(" <img src='link.png'>")
-      $('code').before('<hr>').after('<hr>')
+      $('code').before('<hr>').after('</hr>')
       $('#a').click(function() { $('#ball').remove() } )
       $('#b').click(function() { $('#quote').empty() } )
     </script>

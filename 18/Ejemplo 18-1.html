@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--list3.html-->
+<html>
+
+<head>
+    <title>El Canvas HTML5</title>
+    <script src='OSC.js'></script>
+</head>
+
+<body>
+    <canvas id='mycanvas' width='320' height='240'>
+        <i>mycanvas</i>
+    </canvas>
+    <script>
+        canvas = O('mycanvas')
+        context = canvas.getContext('2d')
+        context.fillStyle = 'red'
+        S(canvas).border = '1px solid black'
+
+        context.beginPath()
+        context.moveTo(160, 120)
+        context.arc(160, 120, 70, 0, Math.PI * 2, false)
+        context.closePath()
+        context.fill()
+    </script>
+</body>
+
+</html>

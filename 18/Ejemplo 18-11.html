@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dibujando texto</title>
+    <script src='OSC.js'></script>
+</head>
+
+<body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+    <script>
+        canvas = O('mycanvas')
+        context = canvas.getContext('2d')
+
+        image = new Image()
+        image.src = 'wicker.jpg'
+        context.font = 'bold 140px Times'
+        context.textBaseline = 'top'
+
+        image.onload = function () {
+            pattern = context.createPattern(image, 'repeat')
+            context.fillStyle = pattern
+            context.fillText('Saludos', 0, 0)
+            context.strokeText('Saludos', 0, 0)
+        }
+    </script>
+</body>
+
+</html>

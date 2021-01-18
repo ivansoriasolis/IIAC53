@@ -14,7 +14,7 @@
       $('#fadeout')   .click(function() { $('#text').fadeOut(   'slow'     ) })
       $('#fadein')    .click(function() { $('#text').fadeIn(    'slow'     ) })
       $('#fadetoggle').click(function() { $('#text').fadeToggle('slow'     ) })
-      $('#fadeto')    .click(function() { $('#text').fadeTo(    'slow', 0.5) })
+      $('#fadeto')    .click(function() { $('#text').fadeTo(    'slow', 0.2) })
     </script>
   </body>
 </html>

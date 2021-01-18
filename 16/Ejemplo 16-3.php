@@ -8,11 +8,13 @@
     <button id='clickme'>Click me</button>
     <p id='result'>Este es un parrafo</p>
     <script>
-      $('#clickme').click(function()
-      {
-        $('#result').html('Has hecho click')
-      }
-      )
+      $('#clickme').dblclick( aparece )
+
+      function aparece()
+        {  
+          $('#result').html('<h1>Has hecho click</h1>')
+        }    
+      
     </script>
   </body>
 </html>

@@ -7,10 +7,11 @@
   <body>
     <p id='result'>Este es un parrafo</p>
     <script>
-      $(function()
-      {
-        $('#result').html('Se ha cargado la pagina')
-      }
+      $(document).ready(
+        function()
+          {
+            $('#result').html('Se ha cargado la pagina')
+          }
       )
     </script>
   </body>

@@ -20,8 +20,8 @@
       <img id='ball' src='ball.png'>
     </div>
     <script>
-      bounce()
-      function bounce()
+      rebotar()
+      function rebotar()
       {
         $('#ball')
           .animate( { left:'270px', top:'380px'}, 'slow', 'linear')

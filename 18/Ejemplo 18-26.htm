@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--list3.html-->
+<html>
+
+<head>
+    <title>Ejemplo de geolocalizacion</title>
+</head>
+
+<body>
+    <script>
+        if (typeof navigator.geolocation == 'undefined')
+            alert("Geolocalizacion no soportada.")
+        else
+            navigator.geolocation.getCurrentPosition(granted, denied)
+        function granted(position) {
+            var lat = position.coords.latitude
+            var lon = position.coords.longitude
+
+            alert("Permisos concedidos. Tu ubicacion es:\n\n"
+                + lat + ", " + lon +
+                "\n\nClick en 'ACEPTAR' para cargar el mapa")
+            window.location.replace("https://www.google.com/maps/@"
+                + lat + "," + lon + ",14z")
+        }
+        function denied(error) {
+            var message
+            switch (error.code) {
+                case 1: message = 'Permisos denegados'; break;
+                case 2: message = 'Posicion no disponible'; break;
+                case 3: message = 'Tiempo de espera terminado'; break;
+                case 4: message = 'Error desconocido'; break;
+            }
+            alert("Geolocation Error: " + message)
+        }
+    </script>
+</body>
+
+</html>

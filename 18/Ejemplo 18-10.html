@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--list3.html-->
+<html>
+
+<head>
+    <title>Dibujando texto</title>
+    <script src='OSC.js'></script>
+</head>
+
+<body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+    <script>
+        canvas = O('mycanvas')
+        context = canvas.getContext('2d')
+        context.font = 'bold 140px Times'
+        context.textBaseline = 'top'
+        context.strokeText('Saludos', 0, 0)
+    </script>
+</body>
+
+</html>

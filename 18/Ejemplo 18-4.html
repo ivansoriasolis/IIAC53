@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--list3.html-->
+<html>
+
+<head>
+    <title>Dibujando rectangulos</title>
+    <script src='OSC.js'></script>
+</head>
+
+<body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+    <script>
+        canvas = O('mycanvas')
+        context = canvas.getContext('2d')
+        S(canvas).background = 'lightblue'
+        gradient = context.createLinearGradient(0, 80, 480, 80)
+        gradient.addColorStop(0, 'white')
+        gradient.addColorStop(1, 'black')
+        context.fillStyle = gradient
+        context.fillRect(80, 80, 480, 80)
+
+    </script>
+</body>
+
+</html>
