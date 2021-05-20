@@ -1,5 +1,6 @@
 <?php
     $balance_banco = 90;
+    $ahorro=0;
     if ($balance_banco < 100)
     {
         $dinero     = 1000;
