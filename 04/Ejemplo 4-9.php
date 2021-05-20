@@ -13,8 +13,9 @@
           break;
        case "Login":
           echo "Has seleccionado Login";
+          break;
        case "Links":
-           echo "Has seleccionado Linkd"
+           echo "Has seleccionado Linkd";
     }
 
 
