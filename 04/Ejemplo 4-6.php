@@ -1,7 +1,7 @@
 <?php
     $balance_banco = 90;
     $ahorros = 0;
-    if (balance_banco < 100)
+    if ($balance_banco < 100)
     {
         $dinero = 1000;
         //$balance_banco = $balance_banco +  $dinero;

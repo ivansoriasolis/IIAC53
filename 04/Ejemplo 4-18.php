@@ -1,7 +1,8 @@
 <?php
-    for ($count = 1; $count <= 12; $count++)
+    for($count = 1; $count<=12; $count++)
     {
-        echo "$count veces";
+        for($col = $count; $col <= 10; $col++)
+            echo "$col ";
         echo "<br>";
     }
 ?>
