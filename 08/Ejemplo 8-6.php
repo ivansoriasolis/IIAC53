@@ -1,4 +1,4 @@
-<?php 
+<?php //sqltest.php
     require_once 'login.php';
     $conexion = new mysqli($hn, $un, $pw, $db);
 
