@@ -3,7 +3,9 @@
     $conexion = new mysqli($hn, $un, $pw, $db);
     if ($conexion->connect_error) die ("Fatal error");
 
-    $query = "DELETE FROM gatos WHERE nombre='Growler'";
+    $query = "DROP TABLE gatos";
     $result = $conexion->query($query);
     if (!$result) die ("Consulta falló");
 ?>
+
+

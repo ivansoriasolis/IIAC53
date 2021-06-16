@@ -3,9 +3,8 @@
     $conexion = new mysqli($hn, $un, $pw, $db);
     if ($conexion->connect_error) die ("Fatal error");
 
-    $query = "DROP TABLE gatos";
+    $query  = "INSERT INTO gatos VALUES(NULL, 'León', 'Leo', 4)";
     $result = $conexion->query($query);
-    if (!$result) die ("Consulta falló");
+    if (!$result) die ("Falló acceso a base de datos");
+  
 ?>
-
-
