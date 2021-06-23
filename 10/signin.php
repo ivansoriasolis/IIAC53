@@ -43,7 +43,7 @@
     else
     {
       echo <<<_END
-      <h1>Ingrese</h1>
+      <h1>Iniciar sesion</h1>
       <form action="signin.php" method="post"><pre>
       Usuario  <input type="text" name="username">
       Password <input type="text" name="password">

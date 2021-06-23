@@ -8,10 +8,10 @@
 
         destroy_session_and_data();
 
-        echo "Sesión terminada <a href='signin.php'>Ingresar</a>.<br>";
+        echo "Sesión terminada <a href='signin.php'>Iniciar sesion</a>.<br>";
     }
     else echo "Por favor <a href='signin.php'>Click aqui</a>
-                para ingresar";
+                para iniciar sesion";
 
     function destroy_session_and_data()
     {

@@ -1,4 +1,4 @@
-<?php 
+<?php //signin.php
     require_once 'login.php';
     $conexion = new mysqli($hn, $un, $pw, $db, $port);
 
@@ -37,4 +37,29 @@
           echo "Usuario/password incorrecto <p><a href='signup.php'>
       Registrarse</a></p>";
       }
+    }
+    else
+    {
+      echo <<<_END
+      <h1>Ingrese</h1>
+      <form action="signin.php" method="post"><pre>
+      Usuario  <input type="text" name="username">
+      Password <input type="text" name="password">
+               <input type="submit" value="INGRESAR">
+      </form>
+      _END;
+    }
+
+    $conexion->close();
+
+    function mysql_entities_fix_string($conexion, $string)
+    {
+        return htmlentities(mysql_fix_string($conexion, $string));
+      }
+    function mysql_fix_string($conexion, $string)
+    {
+        if (get_magic_quotes_gpc()) $string = stripslashes($string);
+        return $conexion->real_escape_string($string);
+      }  
+    }
 ?>
