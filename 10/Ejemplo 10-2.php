@@ -13,6 +13,7 @@ $password = 'unajma';
                 <input type="submit" name="logout" value="Logout"></form>';
         else 
         {
+            header('HTTP/1.0 401 Unauthorized');
             die("Nombre de usuario o contraseña inválido");
         }
             
