@@ -7,10 +7,8 @@
     if (isset($_SERVER['PHP_AUTH_USER'])&&
         isset($_SERVER['PHP_AUTH_PW']))
     {
-        $un_temp= 
-mysql_entities_fix_string($conexion, $_SERVER['PHP_AUTH_USER']);
-        $pw_temp = 
-mysql_entities_fix_string($conexion, $_SERVER['PHP_AUTH_PW']);
+        $un_temp = mysql_entities_fix_string($conexion, $_SERVER['PHP_AUTH_USER']);
+        $pw_temp = mysql_entities_fix_string($conexion, $_SERVER['PHP_AUTH_PW']);
         $query   = "SELECT * FROM usuarios WHERE username='$un_temp'";
         $result  = $conexion->query($query);
 

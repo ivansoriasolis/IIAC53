@@ -10,7 +10,8 @@ $password = 'unajma';
                 htmlspecialchars($_SERVER['PHP_AUTH_USER']).
                 "Password: " . htmlspecialchars($_SERVER['PHP_AUTH_PW']).
                 '<form method="POST" action="Ejemplo 10-2.php">
-                <input type="submit" name="logout" value="Logout"></form>';
+                <input type="submit" name="logout" value="Logout">
+                </form>';
         else 
         {
             header('HTTP/1.0 401 Unauthorized');
@@ -19,7 +20,7 @@ $password = 'unajma';
             
         if (isset($_POST['logout']))
         {   
-            header('WWW-Authenticate: Basic realm="protected area"');
+            //header('WWW-Authenticate: Basic realm="protected area"');
             header('HTTP/1.0 401 Unauthorized');
             die("Saliste"); 
         }

@@ -8,7 +8,8 @@
 
         destroy_session_and_data();
 
-        echo "Sesión terminada <a href='signin.php'>Iniciar sesion</a>.<br>";
+        header('Location: signin.php');
+        die();
     }
     else echo "Por favor <a href='signin.php'>Click aqui</a>
                 para iniciar sesion";

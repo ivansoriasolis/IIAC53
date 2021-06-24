@@ -25,8 +25,8 @@
                 $_SESSION['apellido']=$row[1];
                 echo htmlspecialchars("$row[0] $row[1]:
                     hola $row[0], has ingresado como '$row[0]'");
-                die ("<p><a href='logout.php'>
-              Click para salir</a></p>");
+                die ("<p><a href='continue.php'>
+              Click para continuar</a></p>");
             }
             else {
                 echo "Usuario/password incorrecto <p><a href='signup.php'>
@@ -36,9 +36,7 @@
         else {
           echo "Usuario/password incorrecto <p><a href='signup.php'>
       Registrarse</a></p>";
-      }
-
-        
+      }   
     }
     else
     {

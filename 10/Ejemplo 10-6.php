@@ -7,8 +7,9 @@
         $apellido = htmlspecialchars($_SESSION['apellido']);
 
         echo "Bienvenido otra vez $nombre.<br>
-               Tu nombre completo es $nombre $apellido.<br>";
+               Tu nombre completo es $nombre $apellido.<br>
+               <a href=logout.php>Cerrar sesion</a>";
     }
-    else echo "Por favor <a href=Ejemplo 10-5.php>Click aqui</a>
+    else echo "Por favor <a href=signin.php>Click aqui</a>
                 para ingresar";
 ?>

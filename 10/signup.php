@@ -12,9 +12,9 @@
 
         $password = password_hash($pw_temp, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO usuarios VALUES('$nombre','$apellido','$username', '$password')";
+        $query = "INSERT INTO usuarios 
+            VALUES('$nombre','$apellido','$username', '$password')";
 
-        echo $query;
         $result = $conexion->query($query);
         if (!$result) die ("Falló registro");
 
