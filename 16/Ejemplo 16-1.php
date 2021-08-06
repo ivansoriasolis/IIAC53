@@ -8,8 +8,7 @@
     La biblioteca jQUery usa <code>$()</code>
     o <code>jQuery()</code>
     <script>
-      jq = $
-      jq('code').css('border', '1px solid #aaa')
+      $('code').css('border', '1px solid #aaa')
     </script>
   </body>
 </html>
