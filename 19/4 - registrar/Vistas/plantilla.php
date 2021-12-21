@@ -10,14 +10,15 @@
 <body>
 
 <?php
+$rutasC = new RutasC();
 include 'modulos/menu.php';
 ?>
 
 <section>
 
 <?php
-    $rutas = new RutasControlador();
-    $modulo = $rutas->Rutas();
+    
+    $modulo = $rutasC->procesaRutasC();
     include $modulo;
 ?>
 

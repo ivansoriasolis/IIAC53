@@ -3,7 +3,7 @@ require_once "conexionBD.php";
 
 class EmpleadosM extends ConexionBD{
  
-    static public function RegistrarEmpleadosM($datosC, $tablaBD){
+    public function registrarEmpleadosM($datosC, $tablaBD){
         $cbd = ConexionBD::cBD();
         $nombre = $datosC['nombre'];
         $apellido = $datosC['apellido'];
@@ -18,7 +18,7 @@ class EmpleadosM extends ConexionBD{
         return $result;
     }
 
-    static public function MostrarEmpleadosM($tablaBD){
+    public function mostrarEmpleadosM($tablaBD){
         $cbd = ConexionBD::cBD();
         $query = "SELECT id, nombre, email, apellido, puesto, salario 
                 FROM $tablaBD";
@@ -26,7 +26,7 @@ class EmpleadosM extends ConexionBD{
         return $result;
     }
 
-    static public function EditarEmpleadoM($datosC, $tablaBD){
+    public function editarEmpleadoM($datosC, $tablaBD){
         $cbd = ConexionBD::cBD();
         $id = $datosC['id'];
         $query = "SELECT id, nombre, email, apellido, puesto, salario
@@ -36,7 +36,7 @@ class EmpleadosM extends ConexionBD{
         return $rows;
     }
 
-    static public function ActualizarEmpleadoM($datosC, $tablaBD){
+    public function actualizarEmpleadoM($datosC, $tablaBD){
         $cbd = ConexionBD::cBD();
         extract($datosC);
         $query = "UPDATE $tablaBD

@@ -1,15 +1,15 @@
 <?php //  Modelos/rutasM.php
-class Modelo{
-    static public function RutasModelo($rutas){
-        if( $rutas == "ingreso" || 
-            $rutas == 'empleados' || 
-            $rutas == 'registrar' || 
-            $rutas == 'salir' ||
-            $rutas == 'editar')
+class RutasM{
+    static public function procesaRutasM($ruta){
+        if( $ruta == "ingreso" || 
+            $ruta == 'empleados' || 
+            $ruta == 'registrar' || 
+            $ruta == 'salir' ||
+            $ruta == 'editar')
         {
-            $pagina = "Vistas/modulos/".$rutas. ".php";
+            $pagina = "Vistas/modulos/".$ruta. ".php";
         }
-        else if($rutas == 'index'){
+        else if($ruta == 'index'){
             $pagina = "Vistas/modulos/ingreso.php";
         }
         else {

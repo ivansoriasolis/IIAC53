@@ -1,20 +1,22 @@
 <?php //  Controladores/rutasC.php
-class RutasControlador {
-    public function Plantilla(){
+class RutasC {
+    public function plantillaC(){
         return 'Vistas/plantilla.php';
     }
 
-    public function Rutas(){
+    public function procesaRutasC(){
         if (isset($_GET['ruta'])){
-            $rutas = $_GET['ruta'];
+            $ruta = $_GET['ruta'];
         }
         else
         {
-            $rutas = 'index';
+            $ruta = 'index';
         }
-        $respuesta = Modelo::RutasModelo($rutas);
 
-        return $respuesta;
+        $rutasM = new RutasM();
+        $pagina = $rutasM->procesaRutasM($ruta);
+
+        return $pagina;
     }
 }
 ?>

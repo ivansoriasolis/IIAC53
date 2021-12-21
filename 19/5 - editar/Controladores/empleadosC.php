@@ -1,7 +1,10 @@
 <?php  // Controladores/empleadosC.php
 class EmpleadosC {
+    function __construct(){
+        $this->empleadosM = new EmpleadosM();
+    }
 
-    public function RegistrarEmpleadosC(){
+    public function registrarEmpleadosC(){
         if(isset($_POST['nombreR'])){
             $datosC =array();
             $datosC['nombre'] = $_POST['nombreR'];
@@ -12,7 +15,7 @@ class EmpleadosC {
 
             $tablaBD = 'empleados';
 
-            $respuesta = EmpleadosM::RegistrarEmpleadosM($datosC, $tablaBD);
+            $pagina = $this->empleadosM->registrarEmpleadosM($datosC, $tablaBD);
          
             header('location: index.php?ruta=empleados');
 
@@ -20,24 +23,24 @@ class EmpleadosC {
     }
 
     //mostrar empleados
-    public function MostrarEmpleadosC(){
+    public function mostrarEmpleadosC(){
         $tablaBD = 'empleados';
-        $respuesta = EmpleadosM::MostrarEmpleadosM($tablaBD);
-        return $respuesta;
+        $pagina = $this->empleadosM->mostrarEmpleadosM($tablaBD);
+        return $pagina;
     }
 
     //editar empleados
-    public function EditarEmpleadoC(){
+    public function editarEmpleadoC(){
         if(isset($_GET['id'])){
             $datosC = array('id'=>$_GET['id']);
             $tablaBD = 'empleados';
-            $respuesta = EmpleadosM::EditarEmpleadoM($datosC, $tablaBD);
-            return $respuesta;
+            $pagina = $this->empleadosM->editarEmpleadoM($datosC, $tablaBD);
+            return $pagina;
         }
     }
 
     //actualizar empleados
-    public function ActualizarEmpleadoC(){
+    public function actualizarEmpleadoC(){
         if(isset($_POST['nombreE'])){
             $datosC = array(    'id'=>$_POST['idE'],
                                 'nombre'=>$_POST['nombreE'],
@@ -48,9 +51,9 @@ class EmpleadosC {
                             );
             $tablaBD = 'empleados';
             print_r( $datosC);
-            $respuesta = EmpleadosM::ActualizarEmpleadoM($datosC, $tablaBD);
-            header('location: index.php?rutas=empleados');
-            return $respuesta;
+            $pagina = $this->empleadosM->actualizarEmpleadoM($datosC, $tablaBD);
+            header("location: index.php?ruta=empleados");
+            return $pagina;
         }
     }
 }

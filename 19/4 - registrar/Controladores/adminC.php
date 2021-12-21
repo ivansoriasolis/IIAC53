@@ -1,7 +1,10 @@
 <?php  //Controladores/adminC.php
 class AdminC{
+    function __construct(){
+        $this->adminM = new AdminM();
+    }
+
     public function IngresoC(){
-        session_start();
         if(isset($_SESSION['Ingreso']))
             header("location: index.php?ruta=empleados");
         if(isset($_POST["usuarioI"])){
@@ -9,9 +12,10 @@ class AdminC{
                         "usuario"=>$_POST["usuarioI"], 
                         "clave"=>$_POST["claveI"]);
             $tablaBD = "administradores";
-            $respuesta = AdminM::IngresoM($datosC, $tablaBD);
-            if ($respuesta["usuario"]==$_POST["usuarioI"] && 
-                $respuesta["clave"]==$_POST["claveI"]){
+            $pagina = $this->adminM->IngresoM($datosC, $tablaBD);
+            if ($pagina["usuario"]==$_POST["usuarioI"] && 
+                $pagina["clave"]==$_POST["claveI"]){
+                session_start();
                 $_SESSION['Ingreso']=true;
                 header("location: index.php?ruta=empleados");
             }
@@ -20,6 +24,11 @@ class AdminC{
                 echo "ERROR AL INGRESAR";
             }
         }
+    }
+
+    public function salirC(){
+        session_destroy();
+        header("location:index.php?=ingreso");
     }
 }
 ?>

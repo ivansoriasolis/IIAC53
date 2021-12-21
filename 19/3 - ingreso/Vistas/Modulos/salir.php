@@ -1,5 +1,4 @@
 <?php
-    session_start();
     session_destroy();
 ?>
 <br> <!-- Vistas/Modulos/registrar.php -->

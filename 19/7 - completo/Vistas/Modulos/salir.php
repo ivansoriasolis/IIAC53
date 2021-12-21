@@ -1,7 +1,4 @@
 <?php
-    //session_start();
-    //session_destroy();
-    //Estas funciones se delegaran al controlador de Admin 
     $ingreso = new AdminC();
     $ingreso->salirC();       
 

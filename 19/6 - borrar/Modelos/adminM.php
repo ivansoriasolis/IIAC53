@@ -2,7 +2,7 @@
     require_once "conexionBD.php";
 
     class AdminM extends ConexionBD{
-        static public function IngresoM($datosC, $tablaBD){
+        public function IngresoM($datosC, $tablaBD){
             $cbd = ConexionBD::cBD();
             $usuario = $datosC['usuario'];
             $clave = $datosC['clave'];

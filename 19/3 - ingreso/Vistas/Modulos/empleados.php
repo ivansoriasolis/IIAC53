@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(!$_SESSION["Ingreso"]){
-	header("location:index.php?=ingreso");
-	exit();
-}
-?>
 <br>  <!-- Vistas/Modulos/empleados.php -->
 <h1>Empleados</h1>
 

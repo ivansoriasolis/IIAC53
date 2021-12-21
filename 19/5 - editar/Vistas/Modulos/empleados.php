@@ -1,8 +1,6 @@
 <?php
-RutasControlador::redirigirSesion('ingresa');
-
 $empleados = new EmpleadosC();
-$respuesta = $empleados->MostrarEmpleadosC();
+$pagina = $empleados->mostrarEmpleadosC();
 ?>
 <br>  <!-- Vistas/Modulos/empleados.php -->
 <h1>Empleados</h1>
@@ -22,7 +20,7 @@ $respuesta = $empleados->MostrarEmpleadosC();
 
 	<tbody>
 	<?php
-		foreach($respuesta as $key => $value){
+		foreach($pagina as $key => $value){
 		?>
             <tr>
 			<td><?=$value['nombre']?></td>

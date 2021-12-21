@@ -1,9 +1,7 @@
 <?php
-RutasControlador::redirigirSesion('ingresa');
-
 $empleados = new EmpleadosC();
-$resultado = $empleados->EditarEmpleadoC();
-$empleados->ActualizarEmpleadoC();
+$resultado = $empleados->editarEmpleadoC();
+$empleados->actualizarEmpleadoC();
 ?>
 <br>
 <h1>EDITAR EMPLEADO</h1>

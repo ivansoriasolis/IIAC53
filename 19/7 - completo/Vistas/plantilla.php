@@ -8,19 +8,17 @@
 
 </head>
 <body>
+	<?php
+		session_start();
+		$rutasC = new RutasC();
+		include 'modulos/menu.php';
+	?>
+	<section>
 
-<?php
-$rutas = new RutasControlador();
-$modulo = $rutas->Rutas();
-include 'modulos/menu.php';
-?>
-
-<section>
-
-<?php
-    include $modulo;
-?>
-
-</section>
+		<?php
+			$modulo = $rutasC->procesaRutasC();
+			include $modulo;
+		?>
+	</section>
 </body>
 </html>

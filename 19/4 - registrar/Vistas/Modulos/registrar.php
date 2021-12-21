@@ -1,8 +1,6 @@
 <?php
-RutasControlador::redirigirSesion('ingresa');
-
 $registrar = new EmpleadosC();
-$registrar->RegistrarEmpleadosC();
+$registrar->registrarEmpleadosC();
 ?>
 <br>  <!-- Vistas/Modulos/registrar.php -->
 <h1>REGISTRAR UN EMPLEADO</h1>

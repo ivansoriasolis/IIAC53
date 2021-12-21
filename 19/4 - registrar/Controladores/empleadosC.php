@@ -1,7 +1,10 @@
 <?php  // Controladores/empleadosC.php
 class EmpleadosC {
+    function __construct(){
+        $this->empleadosM = new EmpleadosM();
+    }
 
-    public function RegistrarEmpleadosC(){
+    public function registrarEmpleadosC(){
         if(isset($_POST['nombreR'])){
             $datosC =array();
             $datosC['nombre'] = $_POST['nombreR'];
@@ -12,7 +15,7 @@ class EmpleadosC {
 
             $tablaBD = 'empleados';
 
-            $respuesta = EmpleadosM::RegistrarEmpleadosM($datosC, $tablaBD);
+            $pagina = $this->empleadosM->registrarEmpleadosM($datosC, $tablaBD);
          
             header('location: index.php?ruta=empleados');
 
@@ -20,10 +23,10 @@ class EmpleadosC {
     }
 
     //mostrar empleados
-    public function MostrarEmpleadosC(){
+    public function mostrarEmpleadosC(){
         $tablaBD = 'empleados';
-        $respuesta = EmpleadosM::MostrarEmpleadosM($tablaBD);
-        return $respuesta;
+        $pagina = $this->empleadosM->mostrarEmpleadosM($tablaBD);
+        return $pagina;
     }
 }
 ?>
