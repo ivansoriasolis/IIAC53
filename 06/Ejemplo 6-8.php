@@ -4,6 +4,6 @@
     'laser'=> "Impresora laser",
     'foto' => "Papel fotografico");
 
-    while(list($item, $descripcion)=each($papel))
+    while(list($item, $descripcion)=each($papel)) //each esta obsoleto a partir de PHP 7.2
         echo "$item: $descripcion<br>";
 ?>
