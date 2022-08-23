@@ -15,4 +15,3 @@
     printf("[%-12.12s]\n",  $d); //Justif izqu, corte de 12 caracteres
     printf("[%-'@12.10s]\n",$d); //Justif. izqu, relleno con @, corte 10 car
 ?>
-

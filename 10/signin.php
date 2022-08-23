@@ -1,6 +1,10 @@
-<?php 
+<?php //signin.php
     require_once 'login.php';
     $conexion = new mysqli($hn, $un, $pw, $db, $port);
+
+    session_start();  //inicia o recupera una sesion
+    if(isset($_SESSION['nombre'])) //verifica si ya hay datos de sesion
+        header("Location: continue.php");  //si es asi redirige a donde quieras
 
     if($conexion->connect_error) die("Error fatal");
 
@@ -20,9 +24,10 @@
 
             if (password_verify($pw_temp, $row[3])) 
             {
-                session_start();
+                //session_start();
                 $_SESSION['nombre']=$row[0];
                 $_SESSION['apellido']=$row[1];
+                header("Location: continue.php"); //redirige a la pagina de inicio
                 echo htmlspecialchars("$row[0] $row[1]:
                     hola $row[0], has ingresado como '$row[0]'");
                 die ("<p><a href='continue.php'>
@@ -58,7 +63,6 @@
       }
     function mysql_fix_string($conexion, $string)
     {
-        if (get_magic_quotes_gpc()) $string = stripslashes($string);
         return $conexion->real_escape_string($string);
       }  
 ?>

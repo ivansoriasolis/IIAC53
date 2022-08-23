@@ -1,0 +1,38 @@
+<!--ubigeopost.html-->
+<select id='dep' size="1" onChange="cargaprovincias(this.value)">
+</select>
+<br>
+<select id='prov' size="1" onChange="cargadistritos(this.value)">
+</select>
+<br>
+<select id='dist' size="1">
+</select>
+
+<script>
+    consulta('pais', '00', 'dep')
+
+    function cargaprovincias(id_circ) {
+        document.getElementById('prov').innerHTML = ""
+        consulta('departamento', id_circ, 'prov')
+        document.getElementById('dist').innerHTML = ""
+    }
+
+    function cargadistritos(id_circ) {
+        consulta('provincia', id_circ, 'dist')
+    }
+
+    function consulta(circ, id_circ, id) {
+        request = new XMLHttpRequest()
+        request.onreadystatechange = function () {
+            if (this.readyState == 4 & this.status == 200
+                & this.responseText != null)
+                document.getElementById(id).innerHTML = this.responseText
+        }
+        params = "circunscripcion=" + circ + "&" + "id_circ=" + id_circ
+        request.open("POST", "ubigeopost.php", true)
+        request.setRequestHeader("Content-type",
+            "application/x-www-form-urlencoded")
+        request.send(params)
+    }
+
+</script>

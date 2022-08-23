@@ -1,8 +1,7 @@
 <?php
 $empleados = new EmpleadosC();
 $pagina = $empleados->mostrarEmpleadosC();
-?>
-<br>  <!-- Vistas/Modulos/empleados.php -->
+?><br>  <!-- Vistas/Modulos/empleados.php -->
 <h1>Empleados</h1>
 
 <table id="t1" border="1">
@@ -21,8 +20,7 @@ $pagina = $empleados->mostrarEmpleadosC();
 	<tbody>
 	<?php
 		foreach($pagina as $key => $value){
-		?>
-            <tr>
+		?>            <tr>
 			<td><?=$value['nombre']?></td>
 			<td><?=$value['apellido']?></td>
 			<td><?=$value['email']?></td>
@@ -35,7 +33,5 @@ $pagina = $empleados->mostrarEmpleadosC();
 			</tr>
 		<?php
 		}
-		?>
-
-	</tbody>
+		?>	</tbody>
 </table>

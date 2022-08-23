@@ -3,7 +3,3 @@
         echo "No se puedo renombrar";
     else echo "Archivo renombrado exitosamente";
 ?>
-
-
-
-

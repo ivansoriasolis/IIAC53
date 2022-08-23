@@ -12,16 +12,12 @@
 <?php
 $ruta = new RutasC();
 include 'modulos/menu.php';
-?>
-
-<section>
+?><section>
 
 <?php
     
     $modulo = $ruta->procesaRutasC();
     include $modulo;
-?>
-
-</section>
+?></section>
 </body>
 </html>

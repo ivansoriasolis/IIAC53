@@ -21,6 +21,7 @@
             if (this.readyState == 4) {
                 if (this.status == 200) {
                     if (this.responseText != null) {
+                        alert(this.responseXML)
                         titles = this.responseXML.getElementsByTagName('title')
 
                         for (j = 0; j < titles.length; ++j) {

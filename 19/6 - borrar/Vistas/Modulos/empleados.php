@@ -2,8 +2,7 @@
 $empleados = new EmpleadosC();
 $pagina = $empleados->mostrarEmpleadosC();
 $empleados->borrarEmpleadoC();
-?>
-<br>  <!-- Vistas/Modulos/empleados.php -->
+?><br>  <!-- Vistas/Modulos/empleados.php -->
 <h1>Empleados</h1>
 
 <table id="t1" border="1">
@@ -22,8 +21,7 @@ $empleados->borrarEmpleadoC();
 	<tbody>
 	<?php
 		foreach($pagina as $key => $value){
-		?>
-            <tr>
+		?>            <tr>
 			<td><?=$value['nombre']?></td>
 			<td><?=$value['apellido']?></td>
 			<td><?=$value['email']?></td>
@@ -36,7 +34,5 @@ $empleados->borrarEmpleadoC();
 			</tr>
 		<?php
 		}
-		?>
-
-	</tbody>
+		?>	</tbody>
 </table>

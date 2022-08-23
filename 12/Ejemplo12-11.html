@@ -1,0 +1,45 @@
+<!--ubigeoxml.html-->
+<select id='dep' size="1" onChange="cargaprovincias(this.value)">
+</select>
+<br>
+<select id='prov' size="1" onChange="cargadistritos(this.value)">
+</select>
+<br>
+<select id='dist' size="1">
+</select>
+
+<script>
+    consulta('pais', '00', 'dep')
+
+    function cargaprovincias(id_circ) {
+        document.getElementById('prov').innerHTML = ""
+        consulta('departamento', id_circ, 'prov')
+        document.getElementById('dist').innerHTML = ""
+    }
+
+    function cargadistritos(id_circ) {
+        consulta('provincia', id_circ, 'dist')
+    }
+
+    function consulta(circ, id_circ, id) {
+        request = new XMLHttpRequest()
+        circs = NaN
+        request.onreadystatechange = function () {
+            if (this.readyState == 4 & this.status == 200)
+                circs = this.responseXML.getElementsByTagName('circ')
+            out = ""
+            for (j = 0; j < circs.length; ++j) {
+                valor = circs[j].children[0].childNodes[0].nodeValue
+                nombre = circs[j].children[1].childNodes[0].nodeValue
+                out += "<option value =" + valor + "> " + nombre + " </option>"
+            }
+            document.getElementById(id).innerHTML = out
+        }
+        params = "circunscripcion=" + circ + "&" + "id_circ=" + id_circ
+        request.open("GET", "ubigeoxml.php?" + params, true)
+        // request.setRequestHeader("Content-type",
+        //     "application/x-www-form-urlencoded")
+        request.send(null)
+    }
+
+</script>

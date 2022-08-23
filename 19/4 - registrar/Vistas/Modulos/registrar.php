@@ -1,8 +1,7 @@
 <?php
 $registrar = new EmpleadosC();
 $registrar->registrarEmpleadosC();
-?>
-<br>  <!-- Vistas/Modulos/registrar.php -->
+?><br>  <!-- Vistas/Modulos/registrar.php -->
 <h1>REGISTRAR UN EMPLEADO</h1>
 
 <form method="post" action="">

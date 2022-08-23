@@ -2,8 +2,7 @@
 $empleados = new EmpleadosC();
 $resultado = $empleados->editarEmpleadoC();
 $empleados->actualizarEmpleadoC();
-?>
-<br>
+?><br>
 <h1>EDITAR EMPLEADO</h1>
 <form method="post" action="">
     <input type="hidden" value="<?=$resultado['id']?>" name="idE" required>

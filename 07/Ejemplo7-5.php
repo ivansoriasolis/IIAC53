@@ -6,6 +6,3 @@
     fclose($fh);
     echo $linea;
 ?>
-
-
-

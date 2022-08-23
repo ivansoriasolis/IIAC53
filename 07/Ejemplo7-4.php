@@ -10,5 +10,3 @@
     fclose($fh);
     echo "Archivo ‘testfile.txt’ escrito satisfactoriamente";
 ?>
-
-

@@ -13,16 +13,12 @@
 session_start();
 $rutasC = new RutasC();
 include 'modulos/menu.php';
-?>
-
-<section>
+?><section>
 
 <?php
     
     $modulo = $rutasC->procesaRutasC();
     include $modulo;
-?>
-
-</section>
+?></section>
 </body>
 </html>

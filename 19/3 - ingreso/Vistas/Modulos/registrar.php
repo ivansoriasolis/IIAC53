@@ -4,8 +4,7 @@ if(!$_SESSION["Ingreso"]){
 	header("location:index.php?=ingreso");
 	exit();
 }
-?>
-<br>  <!-- Vistas/Modulos/registrar.php -->
+?><br>  <!-- Vistas/Modulos/registrar.php -->
 <h1>REGISTRAR UN EMPLEADO</h1>
 
 <form method="post" action="">
