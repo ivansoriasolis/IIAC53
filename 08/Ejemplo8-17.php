@@ -3,7 +3,7 @@
     $conexion = new mysqli($hn, $un, $pw, $db);
     if ($conexion->connect_error) die ("Fatal error");
 
-    echo "<form action='Ejemplo 8-17.php' method='post'>
+    echo "<form action='Ejemplo8-17.php' method='post'>
     Usuario:<input type='text' name='user'>
     Contraseña:<input type='text' name = 'pass'>
     <input type='submit'>

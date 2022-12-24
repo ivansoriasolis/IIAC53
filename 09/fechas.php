@@ -1,4 +1,4 @@
-<?php //fecha.php
+<?php
     $actual = time();
     $actualformato = date("Y-m-d\TH:i", $actual);
     echo "<form action ='fechas.php' method='post'>

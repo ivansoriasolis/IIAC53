@@ -1,6 +1,6 @@
 <?php 
     echo <<<_END
-    <form method="post" action="Ejemplo 9-7.php"><pre>
+    <form method="post" action="Ejemplo9-7.php"><pre>
     <select name="veg" size="1">
         <option value="Arbeja">Arbeja</options>
         <option value="Habas">Habas</options>
@@ -15,3 +15,5 @@
     $vegetal=$_POST["veg"];
     echo "Elegiste ". $vegetal;
 ?>
+
+

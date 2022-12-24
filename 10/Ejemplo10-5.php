@@ -2,9 +2,9 @@
     require_once 'login.php';
     $conexion = new mysqli($hn, $un, $pw, $db, $port);
 
-    session_start();  //inicia o recupera una sesion
-    if(isset($_SESSION['nombre'])) //verifica si ya hay datos de sesion
-        header("Location: continue.php");  //si es asi redirige a donde quieras
+    session_start(); 
+    if(isset($_SESSION['nombre'])) 
+        header("Location: continue.php");  
 
     if($conexion->connect_error) die("Error fatal");
 

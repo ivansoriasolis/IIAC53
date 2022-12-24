@@ -11,7 +11,7 @@
 	<?php
 		session_start();
 		$rutasC = new RutasC();
-		include 'Modulos/menu.php';
+		include 'modulos/menu.php';
 	?>	<section>
 
 		<?php
