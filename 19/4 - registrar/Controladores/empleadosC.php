@@ -13,9 +13,7 @@ class EmpleadosC {
             $datosC['puesto'] = $_POST['puestoR'];
             $datosC['salario'] = $_POST['salarioR'];
 
-            $tablaBD = 'empleados';
-
-            $pagina = $this->empleadosM->registrarEmpleadosM($datosC, $tablaBD);
+            $pagina = $this->empleadosM->registrarEmpleadosM($datosC);
          
             header('location: index.php?ruta=empleados');
 
@@ -25,8 +23,8 @@ class EmpleadosC {
     //mostrar empleados
     public function mostrarEmpleadosC(){
         $tablaBD = 'empleados';
-        $pagina = $this->empleadosM->mostrarEmpleadosM($tablaBD);
-        return $pagina;
+        $result = $this->empleadosM->mostrarEmpleadosM($tablaBD);
+        return $result;
     }
 }
 ?>

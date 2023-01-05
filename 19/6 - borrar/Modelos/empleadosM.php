@@ -3,7 +3,7 @@ require_once "conexionBD.php";
 
 class EmpleadosM extends ConexionBD{
  
-    public function registrarEmpleadosM($datosC, $tablaBD){
+    public function registrarEmpleadosM($datosC, $tablaBD = 'empleados'){
         $cbd = ConexionBD::cBD();
         $nombre = $datosC['nombre'];
         $apellido = $datosC['apellido'];
@@ -18,7 +18,7 @@ class EmpleadosM extends ConexionBD{
         return $result;
     }
 
-    public function mostrarEmpleadosM($tablaBD){
+    public function mostrarEmpleadosM($tablaBD = 'empleados'){
         $cbd = ConexionBD::cBD();
         $query = "SELECT id, nombre, email, apellido, puesto, salario 
                 FROM $tablaBD";
@@ -26,7 +26,7 @@ class EmpleadosM extends ConexionBD{
         return $result;
     }
 
-    public function editarEmpleadoM($datosC, $tablaBD){
+    public function editarEmpleadoM($datosC, $tablaBD = 'empleados'){
         $cbd = ConexionBD::cBD();
         $id = $datosC['id'];
         $query = "SELECT id, nombre, email, apellido, puesto, salario
@@ -36,7 +36,7 @@ class EmpleadosM extends ConexionBD{
         return $rows;
     }
 
-    public function actualizarEmpleadoM($datosC, $tablaBD){
+    public function actualizarEmpleadoM($datosC, $tablaBD = 'empleados'){
         $cbd = ConexionBD::cBD();
         extract($datosC);
         $query = "UPDATE $tablaBD
@@ -52,7 +52,7 @@ class EmpleadosM extends ConexionBD{
         return $resultado;    
     }
 
-    public function borrarEmpleadoM($datosC, $tablaBD){
+    public function borrarEmpleadoM($datosC, $tablaBD = 'empleados'){
         $cbd = ConexionBD::cBD();
         extract($datosC);
         $query = "DELETE FROM $tablaBD WHERE id='$id'";

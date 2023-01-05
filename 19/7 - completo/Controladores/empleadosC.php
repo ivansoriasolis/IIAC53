@@ -13,29 +13,24 @@ class EmpleadosC {
             $datosC['puesto'] = $_POST['puestoR'];
             $datosC['salario'] = $_POST['salarioR'];
 
-            $tablaBD = 'empleados';
-
-            $pagina = EmpleadosM::registrarEmpleadosM($datosC, $tablaBD);
+            $result = $this->empleadosM->registrarEmpleadosM($datosC);
          
             header('location: index.php?ruta=empleados');
-
         }
     }
 
     //mostrar empleados
     public function mostrarEmpleadosC(){
-        $tablaBD = 'empleados';
-        $pagina = $this->empleadosM->mostrarEmpleadosM($tablaBD);
-        return $pagina;
+        $result = $this->empleadosM->mostrarEmpleadosM();
+        return $result;
     }
 
     //editar empleados
     public function editarEmpleadoC(){
         if(isset($_GET['id'])){
             $datosC = array('id'=>$_GET['id']);
-            $tablaBD = 'empleados';
-            $pagina = $this->empleadosM->editarEmpleadoM($datosC, $tablaBD);
-            return $pagina;
+            $result = $this->empleadosM->editarEmpleadoM($datosC);
+            return $result;
         }
     }
 
@@ -49,10 +44,10 @@ class EmpleadosC {
                                 'puesto' => $_POST['puestoE'],
                                 'salario' => $_POST['salarioE'],
                             );
-            $tablaBD = 'empleados';
-            $pagina = $this->empleadosM->actualizarEmpleadoM($datosC, $tablaBD);
+
+            $result = $this->empleadosM->actualizarEmpleadoM($datosC);
             header('location: index.php?rutas=empleados');
-            return $pagina;
+            return $result;
         }
     }
 

@@ -11,18 +11,14 @@ class AdminC{
             $datosC = array(    
                         "usuario"=>$_POST["usuarioI"], 
                         "clave"=>$_POST["claveI"]);
-            $tablaBD = "administradores";
-            $pagina = $this->adminM->IngresoM($datosC, $tablaBD);
-            if ($pagina["usuario"]==$_POST["usuarioI"] && 
-                $pagina["clave"]==$_POST["claveI"]){
+            $result = $this->adminM->IngresoM($datosC);
+            if(isset($result)){
                 session_start();
                 $_SESSION['Ingreso']=true;
                 header("location: index.php?ruta=empleados");
             }
             else
-            {
                 echo "ERROR AL INGRESAR";
-            }
         }
     }
 
